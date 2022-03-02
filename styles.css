@@ -1,0 +1,136 @@
+:root {
+    --clr-bg: hsl(257, 40%, 49%);
+    --accent: hsl(300, 69%, 71%);
+    --clr-text: rgb(255, 255, 255);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Body */
+
+body {
+    background-color: var(--clr-bg);
+    background-image: url(images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    font-family: 'Open Sans', sans-serif;
+    padding: 64px 0 0 80px;
+}
+
+
+/* Logo */
+
+.logo img {
+    max-width: 80%;
+    height: auto;
+}
+
+
+/* Main */
+
+main {
+    display: flex;
+    margin-top: 81px;
+}
+
+.box-text {
+    margin-left: 78px;
+    margin-right: 153px;
+    margin-top: 53px;
+    color: var(--clr-text);
+}
+
+.box-text h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 38px;
+    margin-bottom: 34px;
+}
+
+.box-text p {
+    margin-right: -35px;
+    margin-bottom: 29px;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+button {
+    color: var(--clr-bg);
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    padding: 16px 70px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--accent);
+    color: var(--clr-text);
+    transition: 0.3s;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 25px);
+    gap: 20px;
+    justify-content: end;
+    margin-bottom: 3em;
+    margin-right: 6em;
+}
+
+.icon {
+    fill: var(--clr-text);
+    transition: 0.3s;
+}
+
+.icon:hover {
+    fill: var(--accent);
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-image: url(images/bg-mobile.svg);
+        padding: 0;
+        margin: 0;
+        max-width: 375px;
+        text-align: center;
+    }
+    header {
+        width: 50%;
+        margin-top: 1em;
+    }
+    main {
+        flex-direction: column;
+    }
+    .main-image img {
+        max-width: 90%;
+        height: auto;
+    }
+    .box-text {
+        margin: 2.5em;
+    }
+    .box-text h1 {
+        font-size: 1.5em;
+    }
+    .box-text p {
+        margin: 1em;
+        font-size: 14px;
+    }
+    button {
+        padding: 8px 50px;
+        font-size: 14px;
+        margin-top: 1em;
+    }
+    footer {
+        margin: 3em 0 3em 0;
+        justify-content: center;
+    }
+}
